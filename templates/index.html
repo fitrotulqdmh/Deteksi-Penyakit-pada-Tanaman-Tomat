@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veggie Vigilant</title>
+    <script src="https://kit.fontawesome.com/622cd5c220.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css/">
+</head>
+<body>
+    
+<div class="home" id="home">
+    <nav>
+        <h2 class="logo">Veggie <span>Vigilant</span></h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#aplikasi">Aplikasi</a></li>
+            <li><a href="#anggotakelompok">Anggota Kelompok</a></li>
+        </ul>
+    </nav>
+    <div class="image">
+        <img src="{{url_for('static', filename='images/tomat1.jpg')}}">
+    </div>
+    <div class="content">
+        <h4>Deteksi Penyakit pada Tanaman Tomat</h4>
+        <h1>Veggie <span>   <var>Vigilant</var></span></h1>
+        <h3><span>Veggie Vigilant:</span> Deteksi Penyakit pada Tanaman Tomat<br>
+            Aplikasi ini dibuat untuk mendeteksi penyakit pada tanaman tomat,<br>
+            khususnya ciri-ciri yang terdapat di daun tomat. <i>Leaf Disease</i><br>
+            pada tanaman tomat ini terdiri dari 10 kelas, yaitu <i>Late Blight,<br>
+            Spider Mites, Target Spot, Bacterial Spot, Septoria Leaf Spot, Leaf Mold,<br>
+            Mosaic Virus, Powder Mildew, Early Blight dan Leaf Curl Virus.</i><br>
+            Pengguna hanya cukup mengunggah foto daun tomat yang akan diprediksi.<br>
+            Output dari aplikasi ini berupa tanaman sehat atau berpotensi penyakit.<br>
+        </h3>
+        <a href="#aplikasi">Mulai</a>
+    </div>
+</div>
+
+<section class="aplikasi" id="aplikasi">
+    <div class="aplikasi-saya">
+        <img src="{{url_for('static', filename='images/tomat1.jpg')}}">
+        <div class="aplikasi-text">
+            <h2>Apli<span>kasi</span></h2>
+            <h5>Deteksi Penyakit pada <span>Tumbuhan Tomat</span></h5>
+            <p>Aplikasi ini terintegrasi langsung dengan roboflow, pengguna dapat melakukan deteksi image penyakit pada tanaman tomat dengan cara mengunggah gambar daun tomat atau melakukan deteksi langsung melalui webcam.</p>
+
+            <!--<div class="webcam-container">
+                <div class="loading justify-content-center d-flex">
+                    <video id="video" autoplay muted playsinline></video>
+                    <div id="fps"></div>
+                </div>
+            </div>
+            <div class="button d-flex justify-content-center d-grid gap-2">
+                <button class="btn tombol btn-warning" id="btn-start" type="button">Start</button>
+            </div>-->
+
+            <!--<form class="choose" action='prediction', method="post" enctype="multipart/form-data">
+                <input type="file" class="upload-box" name="imagefile">-->
+                <input class="button" type="submit" value="Detect" id="predictButton">
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="anggota" id="anggotakelompok">
+    <div class="kelompok-text">
+        <h2>Anggota <span>Kelompok</span></h2>
+        <div class="team-member">
+            <img src="{{url_for('static', filename='images/alfi.png')}}">
+            <h5>Alfiana Ramadhani</h5>
+            <p>Teknik Elektro</p>
+            <p>Universitas Sebelas Maret</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{{url_for('static', filename='images/alif.jpg')}}">
+            <h5>Alif Fachrul Rizky Endiyanto</h5>
+            <p>Sistem Informasi</p>
+            <p>Universitas Nahdlatul Ulama Surabaya</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{{url_for('static', filename='images/balqis.jpg')}}">
+            <h5>Balqis Yudhi Putri</h5>
+            <p>Bisnis Digital</p>
+            <p>Universitas Global Jakarta</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{{url_for('static', filename='images/pipit.jpg')}}">
+            <h5>Fitrotul Qodimah</h5>
+            <p>Informatika</p>
+            <p>Universitas PGRI Semarang</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>Kelompok 8 - Unicorn</p>
+    <p>Artificial Intelligence 4 Jobs - Orbit Future Academy<br> Studi Independent Bersertifikat Batch 5</p>
+    <p class="end">CopyRight@Kel8_Unicorn</p>
+</footer>
+
+    <script>
+        document.getElementById('predictButton').addEventListener('click', function()
+        {window.location.href = 'https://app.roboflow.com/unicorn-0qv1i/tomatoes-detection-opqa4/deploy/1?webcam=true';})
+    </script>
+</body>
+</html>

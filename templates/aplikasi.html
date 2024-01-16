@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/622cd5c220.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css/">
+    <link rel="preconnect" href=".templates/index.html">
+</head>
+<body>
+    <nav>
+        <h2 class="logo">Veggie <span>Vigilant</span></h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#aplikasi">Aplikasi</a></li>
+            <li><a href="#anggotakelompok">Anggota Kelompok</a></li>
+        </ul>
+    </nav>
+
+    <section class="aplikasi" id="aplikasi">
+        <div class="aplikasi-saya">
+            <img src="{{url_for('static', filename='images/tomat1.jpg')}}">
+            <div class="aplikasi-text">
+                <h2>Apli<span>kasi</span></h2>
+                <h5>Deteksi Penyakit pada <span>Tumbuhan Tomat</span></h5>
+                <p>Pilih foto tanaman tomat yang akan diuji pada tombol dibawah ini!</p>
+                <!--<form class="choose" action='prediction', method="post" enctype="multipart/form-data">
+                    <input type="file" class="upload-box" name="imagefile">-->
+                    <input class="button" type="submit" value="Predict Image" id="predictButton">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Kelompok 8 - Unicorn</p>
+        <p>Artificial Intelligence 4 Jobs - Orbit Future Academy<br> Studi Independent Bersertifikat Batch 5</p>
+        <p class="end">CopyRight@Kel8_Unicorn</p>
+    </footer>
+    
+        <script>
+            document.getElementById('predictButton').addEventListener('click', function()
+            {window.location.href = 'https://app.roboflow.com/unicorn-0qv1i/tomatoes-detection-opqa4/deploy/1?webcam=true';})
+        </script>
+</body>
+</html>
